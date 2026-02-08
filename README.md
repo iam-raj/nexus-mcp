@@ -10,7 +10,7 @@
 ## 🛠️ Installation
 
 1. **Prerequisites:** Install [uv](https://astral.sh/)
-2. **Clone the repo:**
+2. **Clone the repo:** [iam-raj/nexus-mcp](https://github.com/iam-raj/nexus-mcp.git)
    ```bash
-   git clone [iam-raj/nexus-mcp](https://github.com/iam-raj/nexus-mcp.git)
+   git clone https://github.com/iam-raj/nexus-mcp.git
    cd nexus-mcp

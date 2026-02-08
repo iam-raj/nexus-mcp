@@ -1,0 +1,10 @@
+[project]
+name = "nexus-mcp"
+version = "1.0.0"
+description = "nexus-mcp is a personalized Model Context Protocol (MCP) server"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "httpx>=0.28.1",
+    "mcp[cli]>=1.26.0",
+]

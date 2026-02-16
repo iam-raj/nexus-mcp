@@ -18,3 +18,15 @@
 - Be concise. Skip the fluff.
 - If a terminal command fails, analyze the error and suggest a fix immediately.
 - Before editing files, always verify their current state using `read_file`.
+
+## 5. Operational Integration & Compliance (MANDATORY)
+- **Pre-Commit Check:** Before suggesting any `git commit` or `git push` command, you MUST automatically run the `scan_for_secrets` tool on the relevant directory.
+- **Fail-Fast Protocol:** If `scan_for_secrets` returns any ❌ or ⚠️ findings:
+    1. DO NOT proceed with the git command.
+    2. Immediately alert me to the specific file and line.
+    3. Suggest a method to move the secret to a `.env` file or use a secret manager.
+- **Dependency Audit:** Before adding any new Python library, check if it has known vulnerabilities or if there is a more lightweight alternative compatible with Python 3.11.
+
+## 6. Troubleshooting Logic
+- If I report a "connection error" or "timeout," automatically run `check_connectivity` for the relevant endpoint AND `check_system_health` to see if local resource exhaustion is the cause.
+- Always log significant troubleshooting steps and findings using the `write_nexus_note` tool in a file named `incident_logs.md`.

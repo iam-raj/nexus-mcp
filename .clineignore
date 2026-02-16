@@ -1,0 +1,24 @@
+# .clineignore file
+# This file is used to ignore files and directories in the Cline IDE
+
+# Ignore the nexus_notes directory
+nexus_notes/
+
+# Ignore any .env files
+*.env
+
+# Ignore Python cache files
+__pycache__/
+*.pyc
+
+# Ignore virtual environments
+.venv/
+venv/
+
+# Ignore any temporary files
+*.tmp
+*.log
+
+# Ignore any backup files
+*.bak
+*.backup

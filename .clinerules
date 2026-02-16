@@ -1,0 +1,20 @@
+# Personal AI Lab Rules
+
+## 1. Environment & Portability
+- **Python Version:** Always use **Python 3.11**. If generating code, ensure compatibility with 3.11 syntax (e.g., using `TaskGroup` or standard library improvements).
+- **Dependency Management:** I use `uv`. Prefer `uv run` or `uv pip` over standard `pip`.
+- **Project Structure:** This repository contains my MCP servers. Treat the repository root as the base for all relative paths. Do not use absolute paths (e.g., /Users/username/...).
+
+## 2. MCP Development Rules
+- **Modular Design:** When creating new tools for my MCP server, keep them modular. Prefer creating a new file in a `tools/` directory rather than one giant `server.py`.
+- **Validation:** Use `pydantic` for input validation in MCP tool schemas.
+- **Portability:** When suggesting terminal commands to start the server, use `uv run server.py` from the project root.
+
+## 3. FinTech Engineer Habits (Personal Lab)
+- **Security:** Even in this personal space, never hardcode API keys. Use `.env` files (which are ignored by `.clineignore`) and reference them using `os.getenv`.
+- **Logging:** Implement basic logging in Python scripts to help debug MCP tool calls.
+
+## 4. Interaction Style
+- Be concise. Skip the fluff.
+- If a terminal command fails, analyze the error and suggest a fix immediately.
+- Before editing files, always verify their current state using `read_file`.
